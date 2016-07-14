@@ -22,7 +22,7 @@ megaman:
 oreo:
   name: Ari
   
-autopilot:
+Ctrlautopilot:
   name: Chandan
 
 light4:
@@ -193,5 +193,4 @@ sonata:
   name: Heejin Ahn
 
 duckiebot1:
-	name: Victor Arango-Quiroga
   name: Victor Arango-Quiroga
