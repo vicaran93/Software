@@ -7,6 +7,9 @@ from sensor_msgs.msg import Joy
 import time
 from __builtin__ import True
 
+#new module vicaran
+from duckiebot_vicaran93 import PPMprogram
+
 class JoyMapper(object):
     def __init__(self):
         self.node_name = rospy.get_name()
@@ -122,6 +125,10 @@ class JoyMapper(object):
             avoidance_msg.data = True 
             self.pub_avoidance.publish(avoidance_msg)
 
+        # new code to run Python file to make duckiebot follow a preplanned map	
+	elif (joy_msg.buttons[0] == 1): 
+		print "the button A was pressed!"
+		PPMprogram.PPMap()
         else:
             some_active = sum(joy_msg.buttons) > 0
             if some_active:
